@@ -1,0 +1,15 @@
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Task Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="taskName"
+        placeholder="Enter Task Name">
+    </div>
+</div>
+
+<button (click)="addTask()" *ngIf="tasks.Id==0" class="btn btn-primary" data-bs-dismiss="modal">
+    Add
+</button>
+
+<button (click)="updateTask()" *ngIf="tasks.Id!=0" class="btn btn-primary" data-bs-dismiss="modal">
+    Update
+</button>
